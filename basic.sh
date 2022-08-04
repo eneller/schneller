@@ -1,7 +1,6 @@
 #!/bin/bash
 GITMIRROR=git@github.com:eneller
 #----------------------------------------#
-# INSTALL i3 
 
 
 
@@ -13,11 +12,7 @@ dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
 
 # Set up some basic stuff
-cd ~ && mkdir Code Arbeit; 
+cd ~ && mkdir -p Arbeit Code Uni Downloads/Torrent; 
 cd ~/Code && git clone "$GITMIRROR/.dotfiles" dotfiles; \
   git clone "$GITMIRROR/ansible"
-
-# Stuff from the initial clean i3 install attempt
-#install_pulse # run the manjaro pulseAudio install script
-#sudo pacman -S network-manager-applet # install network manager + applet here
 
