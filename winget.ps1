@@ -1,7 +1,4 @@
 # inspired by https://github.com/Kugane/winget/blob/main/winget-basic.ps1
-# use https://github.com/ChrisTitusTech/winutil for further tweaks
-# needs Set-ExecutionPolicy RemoteSigned to allow execution
-
 # Based on this gist: https://gist.github.com/Codebytes/29bf18015f6e93fca9421df73c6e512c
 
 
@@ -21,7 +18,7 @@ function winget_iterate {
     Write-Host -ForegroundColor Cyan "Installing new Apps"
     echo $list
     Foreach ($app in $app_list){
-        $listApp = winget list --exact -q $app.name
+        $listApp = winget search --exact $app.name
         if ([String]::Join("", $listApp).Contains($app.name)) {
             Write-Host -ForegroundColor Yellow  "Installing:" $app.name
 
@@ -72,9 +69,7 @@ function get_list {
 }
 
 
-$winget_install_command = "winget install --exact --scope machine --accept-package-agreements --accept-source-agreements"
+$winget_install_command = "winget install --silent --exact --scope machine --accept-package-agreements --accept-source-agreements"
 # TODO use --silent for silent install and --interactive for gui install
 $desktoppath = [Environment]::GetFolderPath("Desktop")
 $errorlog = "errors.txt"
-# winget_iterate -winget_command $winget_install_command -app_list $apps
-

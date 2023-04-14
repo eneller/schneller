@@ -24,6 +24,7 @@ $apps_gaming = @(
     @{name = "Valve.Steam" }
     @{name = "Nvidia.GeForceExperience" }
     @{name = "Mojang.MinecraftLauncher" }
+    @{name = "RiotGames.Valorant.EU" }
 );
 ### These apps are installed silently for all users ###
 # for msstore apps you need to specify the source like below
@@ -37,6 +38,13 @@ $apps_comms = @(
 #    @{name = "9MVZQVXJBQ9V"; source = "msstore" }        # AV1 VideoExtension
 #    @{name = "9NCTDW2W1BH8"; source = "msstore" }        # Raw-PictureExtension
 #    @{name = "9N95Q1ZZPMH4"; source = "msstore" }        # MPEG-2-VideoExtension
+);
+
+$bloat = @(
+  "MicrosoftTeams"
+  "Microsoft.Todos"
+  "Microsoft.MicrosoftSolitaireCollection"
+  "Microsoft.MicrosoftStickyNotes"
 );
 
 $apps_all = $apps_basic + $apps_productivity + $apps_gaming + $apps_comms
