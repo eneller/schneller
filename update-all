@@ -1,0 +1,4 @@
+pipx upgrade-all
+pacman -Syu
+yay -Syu
+cargo install "package" to update package
