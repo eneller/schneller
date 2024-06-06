@@ -1,4 +1,5 @@
 pipx upgrade-all
 pacman -Syu
+pacman -S --needed "$package"
 yay -Syu
-cargo install "package" to update package
+cargo install "$package" to update package
