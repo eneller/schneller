@@ -82,7 +82,7 @@ gdb
 gptfdisk
 powertop
 util-linux
-pandoc
+pandoc-cli
 mlocate
 mode
 neovim
@@ -138,6 +138,7 @@ xarchiver
 xfburn
 xsv
 xz
+psutils
 # AUR:
 android-sdk
 anki-bin
