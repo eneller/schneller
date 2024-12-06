@@ -116,3 +116,6 @@ gnucash-docs
 lazygit
 firefox-tridactyl
 just
+python-uv
+inotify-tools
+entr
